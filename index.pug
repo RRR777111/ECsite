@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="css/style.css")
+    title ECsite
+  body
+    .wrapper
+      header.header
+        h1.header__ttl
+          a.header__link(href="#") logo
+        nav.gnav#gnav
+          ul.gnav__nav1
+            -
+              let list = [
+                {
+                  txt: 'WOMAN',
+                  href: '#',
+                },
+                {
+                  txt: 'MEN',
+                  href: '#',
+                },
+                {
+                  txt: 'BABY',
+                  href: '#',
+                },
+                {
+                  txt: 'KIDS',
+                  href: '#',
+                }
+              ]
+
+            each item in list
+              li.gnav__item 
+                a(href=item.href).gnav__link #{item.txt}
+      main.main
+        .main__wrapper
+          h1.main__ttl 無地ジャケット
+          p.mv
+            img(src="img/main.jpg").mv__img#mv__img
+
+          .main__box1
+            .main__pic-box
+              -
+                let picItem = [
+                  {
+                    img: 'img/1.jpg',
+                    src:'img/1.jpg'
+                  },
+                  {
+                    img: 'img/2.jpg',
+                    src:'img/2.jpg'
+                  },
+                  {
+                    img: 'img/3.jpg',
+                    src:'img/3.jpg'
+                  },
+                  {
+                    img: 'img/4.jpg',
+                    src:'img/4.jpg'
+                  },
+                  {
+                    img: 'img/5.jpg',
+                    src:'img/5.jpg'
+                  },
+                  {
+                    img: 'img/6.jpg',
+                    src:'img/6.jpg'
+                  },
+                  {
+                    img: 'img/7.jpg',
+                    src:'img/7.jpg'
+                  },
+                  {
+                    img: 'img/8.jpg',
+                    src:'img/8.jpg'
+                  },
+                  {
+                    img: 'img/9.jpg',
+                    src:'img/9.jpg'
+                  },
+                  {
+                    img: 'img/10.jpg',
+                    src:'img/10.jpg'
+                  },
+                  {
+                    img: 'img/11.jpg',
+                    src:'img/11.jpg'
+                  },
+                  {
+                    img: 'img/12.jpg',
+                    src:'img/12.jpg'
+                  },
+                  {
+                    img: 'img/13.jpg',
+                    src:'img/13.jpg'
+                  }
+                ]
+              each pic in picItem
+                p.main__pic
+                  a.main__link(href=pic.img)
+                    img(src=pic.src).main__img
+
+          .main__box2
+            p.main__price ￥151,200
+              span.main__span
+                | +税込
+            p.main__txt  全体のシルエットはすっきりしながら、クラシックなムードを備えたシルエットです。 シングル2つ釦、内胸ポケット左右にパスポートポケットを採用し、長財布等も収納しやすく非常に機能的です。
+            .main__unit-con
+            .main__unit
+              h2.main__sb-ttl カラー
+              .main__unit-color1
+              .main__unit-color2
+              .main__unit-color3
+
+            .main__unit
+              h2.main__sb-ttl サイズ
+              p.main__unit-size S
+              p.main__unit-size M
+              p.main__unit-size L
+
+            .main__unit
+              h2.main__sb-ttl 数量
+              .main__num-box
+                select(name="”num”").main__num
+                  option(value="") 1
+                  option(value="") 2
+                  option(value="") 3
+                  option(value="") 4
+                  option(value="") 5
+                  option(value="") 6
+                  option(value="") 7
+                  option(value="") 8
+                  option(value="") 9
+                  option(value="") 10
+      p.main__btn
+        a(href="#").main__btn-link カートに追加
+
+      footer.footer
+    //- script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js")
+    script(src="main.js")
