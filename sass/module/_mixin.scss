@@ -1,4 +1,4 @@
-@mixin media($width-madia: 980px) {
+@mixin media($width-madia: 1450px) {
   @media screen and(min-width: $width-madia) {
     @content
   }

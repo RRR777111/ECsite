@@ -24,14 +24,15 @@
 }
 
 .main {
-  &__wrapper{
+  &__wrapper {
     @include gap($margin: 0 auto 32px, $width: 80%);
     min-width: 375px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include media{
+
+    @include media {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -43,6 +44,7 @@
     padding-bottom: 32px;
     text-align: center;
     font-size: 19px;
+
     @include media {
       width: 80%;
       text-align-last: left;
@@ -50,7 +52,8 @@
   }
 
   &__pic-box {
-    @include gap($margin: 0 auto 32px, $width: 80%);
+    @include gap($margin: 0 auto 32px, $width: 75%);
+    max-width: 700px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -70,6 +73,7 @@
     max-width: 100px;
   }
 
+
   &__box2 {
     @include media {
       width: 50%;
@@ -78,7 +82,8 @@
   }
 
   &__price {
-    @include gap($margin: 0 auto 16px, $width: 80%);
+    @include gap($margin: 0 auto 16px, $width: 75%);
+    max-width: 700px;
     font-size: 19px;
     font-weight: bold;
   }
@@ -90,23 +95,23 @@
   }
 
   &__txt {
-    @include gap($margin: 0 auto 16px, $width: 80%);
-    max-width: 500px;
+    @include gap($margin: 0 auto 16px, $width: 75%);
+    max-width: 700px;
     font-size: 13px;
     letter-spacing: 0.2em;
     line-height: 1.2;
   }
 
-  &__unit-con{
+  &__unit-con {
     @include gap($margin: 0 auto 16px, $width: 80%);
-    max-width: 500px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
   }
 
   &__unit {
     @include gap($margin: 0 auto 16px, $width: 80%);
-    max-width: 500px;
+    max-width: 700px;
     margin-bottom: 28px;
     display: flex;
     flex-wrap: wrap;
@@ -152,11 +157,12 @@
   }
 }
 
-.mv{
-  &__img{
+.mv {
+  &__img {
     @include gap($margin: 0 auto 32px, $width: 80%);
-    max-width: 500px;
+    max-width: 700px;
     display: block;
+
     @include media {
       margin: 0 64px;
     }

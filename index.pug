@@ -7,7 +7,7 @@ html(lang="ja")
     link(rel="stylesheet" href="css/style.css")
     title ECsite
   body
-    .wrapper
+    .wrapper#wrapper
       header.header
         h1.header__ttl
           a.header__link(href="#") logo
@@ -43,7 +43,7 @@ html(lang="ja")
             img(src="img/main.jpg").mv__img#mv__img
 
           .main__box1
-            .main__pic-box
+            .main__pic-box#main__pic-box
               -
                 let picItem = [
                   {
@@ -141,4 +141,5 @@ html(lang="ja")
 
       footer.footer
     //- script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
     script(src="main.js")
